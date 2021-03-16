@@ -6,7 +6,7 @@
 import * as THREE from 'three'
 
 export default {
-  name: 'Line',
+  name: 'LineL',
   mounted () {
     const scene = new THREE.Scene()
 
