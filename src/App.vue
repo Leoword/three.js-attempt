@@ -1,9 +1,13 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/line">折线</router-link>
-      <router-link to="/text">文字</router-link>
-      <router-link to="/triggle">三角形</router-link>
+      <router-link to="/camera/orthographic">正交投影照相机</router-link>
+      <router-link to="/camera/perspective">透视投影照相机</router-link>
+      <router-link to="/geometry/cube">立方体</router-link>
+      <router-link to="/geometry/plane">平面</router-link>
+      <router-link to="/geometry/sphere">球体</router-link>
+      <router-link to="/geometry/circle">圆形</router-link>
+      <router-link to="/geometry/cylinder">柱体</router-link>
     </div>
     <router-view></router-view>
   </div>

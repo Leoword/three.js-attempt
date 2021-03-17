@@ -15,8 +15,8 @@ export default {
 		const scene = new Three.Scene()
 		// const camera = new Three.PerspectiveCamera(45, 4 / 3, 1, 1000)
 		const camera = new Three.OrthographicCamera(-3, 3, 1.5, -1.5, 1, 10)
-		camera.position.set(2, 0, 5)
-		camera.lookAt(new Three.Vector3(0, 0, 0))
+		camera.position.set(5, 0, 5)
+		// camera.lookAt(new Three.Vector3(0, 0, 0))
 		
 		scene.add(camera)
 

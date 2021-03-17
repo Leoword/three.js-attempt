@@ -3,20 +3,36 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-import Line from './components/Line.vue'
-import Text from './components/Text.vue'
-import Triggle from './components/Triggle.vue'
+import Orthographic from './components/cameras/Orthographic.vue'
+import Perspective from './components/cameras/Perspective.vue'
+import Cube from './components/Geometry/Cube.vue'
+import Plane from './components/Geometry/Plane.vue'
+import Sphere from './components/Geometry/Sphere.vue'
+import Circle from './components/Geometry/Circle.vue'
+import Cylinder from './components/Geometry/Cylinder.vue'
 
 export default new VueRouter({
 	routes: [
 		{
-			path: '/line', component: Line
+			path: '/camera/orthographic', component: Orthographic
 		},
 		{
-			path: '/triggle', component: Triggle
+			path: '/camera/perspective', component: Perspective
 		},
 		{
-			path: '/text', component: Text
+			path: '/geometry/cube', component: Cube
+		},
+		{
+			path: '/geometry/plane', component: Plane
+		},
+		{
+			path: '/geometry/sphere', component: Sphere
+		},
+		{
+			path: '/geometry/circle', component: Circle
+		},
+		{
+			path: '/geometry/cylinder', component: Cylinder
 		}
 	]
 })
