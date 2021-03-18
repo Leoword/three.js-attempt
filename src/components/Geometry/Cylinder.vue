@@ -15,7 +15,7 @@ export default {
 
 		const scene = new Three.Scene()
 		const camera = new Three.PerspectiveCamera(60, 2/1, 1, 10)
-		camera.position.set(-1, 2, 8)
+		camera.position.set(-1, 0, 8)
 		scene.add(camera)
 		const material = new Three.MeshBasicMaterial({
 			color: 0x00ffff,

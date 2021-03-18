@@ -10,6 +10,11 @@ import Plane from './components/Geometry/Plane.vue'
 import Sphere from './components/Geometry/Sphere.vue'
 import Circle from './components/Geometry/Circle.vue'
 import Cylinder from './components/Geometry/Cylinder.vue'
+import Hedron from './components/Geometry/Hedron.vue'
+import Torus from './components/Geometry/Torus.vue'
+import TorusKnot from './components/Geometry/TorusKnot.vue'
+import Text from './components/Geometry/Text.vue'
+import Custom from './components/Geometry/Custom.vue'
 
 export default new VueRouter({
 	routes: [
@@ -33,6 +38,21 @@ export default new VueRouter({
 		},
 		{
 			path: '/geometry/cylinder', component: Cylinder
+		},
+		{
+			path: '/geometry/hedron', component: Hedron
+		},
+		{
+			path: '/geometry/torus', component: Torus
+		},
+		{
+			path: '/geometry/torusKnot', component: TorusKnot
+		},
+		{
+			path: '/geometry/text', component: Text
+		},
+		{
+			path: '/geometry/custom', component: Custom
 		}
 	]
 })

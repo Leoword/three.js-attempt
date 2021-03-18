@@ -19,14 +19,26 @@ export default {
 		scene.add(camera)
 
 		const cube = new Three.Mesh(
-			new Three.CubeGeometry(1,2,3, 2, 2, 2),
+			new Three.CubeGeometry(1,1,1, 2, 2, 2),
 			new Three.MeshBasicMaterial({
 				color: 0xffff00,
 				wireframe: true
 			})
 		)
 
+		cube.position.x = -2
+
+		const cube1 = new Three.Mesh(
+			new Three.CubeGeometry(1,1,1),
+			new Three.MeshLambertMaterial({
+				emissive: 0xffaa00,
+			})
+		)
+
+		cube1.position.x = 0
+
 		scene.add(cube)
+		scene.add(cube1)
 		renderer.render(scene, camera)
 	}
 }

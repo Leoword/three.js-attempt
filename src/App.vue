@@ -8,6 +8,11 @@
       <router-link to="/geometry/sphere">球体</router-link>
       <router-link to="/geometry/circle">圆形</router-link>
       <router-link to="/geometry/cylinder">柱体</router-link>
+      <router-link to="/geometry/hedron">多面体</router-link>
+      <router-link to="/geometry/torus">圆环</router-link>
+      <router-link to="/geometry/torusKnot">圆环结</router-link>
+      <router-link to="/geometry/text">字体</router-link>
+      <router-link to="/geometry/custom">自定义</router-link>
     </div>
     <router-view></router-view>
   </div>
