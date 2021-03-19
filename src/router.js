@@ -15,6 +15,10 @@ import Torus from './components/Geometry/Torus.vue'
 import TorusKnot from './components/Geometry/TorusKnot.vue'
 import Text from './components/Geometry/Text.vue'
 import Custom from './components/Geometry/Custom.vue'
+import MaterialColor from './components/material/Color.vue'
+import MaterialAmbient from './components/material/ambient.vue'
+import MaterialEmissive from './components/material/emissive.vue'
+import MaterialImage from './components/material/Image.vue'
 
 export default new VueRouter({
 	routes: [
@@ -53,6 +57,18 @@ export default new VueRouter({
 		},
 		{
 			path: '/geometry/custom', component: Custom
+		},
+		{
+			path: '/material/color', component: MaterialColor
+		},
+		{
+			path: '/material/ambient', component: MaterialAmbient
+		},
+		{
+			path: '/material/emissive', component: MaterialEmissive
+		},
+		{
+			path: '/material/image', component: MaterialImage
 		}
 	]
 })
