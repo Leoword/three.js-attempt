@@ -19,6 +19,8 @@ import MaterialColor from './components/material/Color.vue'
 import MaterialAmbient from './components/material/ambient.vue'
 import MaterialEmissive from './components/material/emissive.vue'
 import MaterialImage from './components/material/Image.vue'
+import BasicAnimation from './components/animation/Baisc.vue'
+import ComplexAnimation from './components/animation/Complex.vue'
 
 export default new VueRouter({
 	routes: [
@@ -69,6 +71,12 @@ export default new VueRouter({
 		},
 		{
 			path: '/material/image', component: MaterialImage
+		},
+		{
+			path: '/animation/basic', component: BasicAnimation
+		},
+		{
+			path: '/animation/complex', component: ComplexAnimation
 		}
 	]
 })

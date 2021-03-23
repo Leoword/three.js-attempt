@@ -20,6 +20,8 @@
         <router-link to="/material/ambient">材质环境光散射</router-link>
         <router-link to="/material/emissive">材质自发光</router-link>
         <router-link to="/material/image">材质图片</router-link>
+        <router-link to="/animation/basic">简易动画</router-link>
+        <router-link to="/animation/complex">复杂动画</router-link>
       </div>
     </div>
     <router-view></router-view>
