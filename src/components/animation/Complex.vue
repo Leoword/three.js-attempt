@@ -44,7 +44,7 @@ export default {
 			new SphereGeometry(.1, 25, 25),
 			new MeshLambertMaterial({
 				color: 0x00f0f0,
-				emissive: 0x000f0f
+				emissive: 0x000f0f, wireframe: true
 			})
 		)
 
@@ -66,29 +66,42 @@ export default {
 			plane.position.y = -0.1
 			scene.add(plane)
 
-			let v = 0, a = 0.05, id, isDown = true;
+			let v = 0, a = 0.003, id, isDown = true;
 
 			function draw() {
 				stat.begin()
+
 				if (v >=1.3 && isDown) {
-					a = -0.05;
+					a = -0.003;
 					isDown = false
 				} else if (v<=0 && !isDown) {
-					a = 0.05;
+					a = 0.003;
 					isDown = true
 				}
 
 				v+=a
 
-				if (sphere.position.y <= 0) {
-					sphere.position.y = Math.round((sphere.position.y + v) * 100) / 100
+				if (!isDown) {
+					if (sphere.position.y < 1.3) {
+						sphere.position.y = Math.round((sphere.position.y + v) * 100) / 100
+					} else {
+						sphere.position.y =  1.3
+						isDown = true
+						v = 0
+					}
 				} else {
-					if (Math.round((sphere.position.y - v) * 100) / 100 >= 0) {
+					if (Math.round((sphere.position.y - v) * 100) / 100 > 0) {
 						sphere.position.y = Math.round((sphere.position.y - v) * 100) / 100
 					} else {
 						sphere.position.y = 0
+						isDown = false
+						v= 1.3
 					}
 				}
+
+				sphere.rotation.x = (sphere.rotation.x + 0.01) %(Math.PI * 2)
+				sphere.rotation.y = (sphere.rotation.y + 0.01) %(Math.PI * 2)
+
 
 				renderer.render(scene, camera)
 
