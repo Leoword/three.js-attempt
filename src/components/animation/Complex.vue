@@ -48,7 +48,9 @@ export default {
 			})
 		)
 
-		sphere.position.y = 1.3
+		let maxHeight = 1.3
+
+		sphere.position.y = maxHeight
 
 		scene.add(sphere)
 
@@ -71,7 +73,13 @@ export default {
 			function draw() {
 				stat.begin()
 
-				if (v >=1.3 && isDown) {
+				if (maxHeight <=0) {
+					return
+				}
+
+				maxHeight-=0.01;
+
+				if (v >=maxHeight && isDown) {
 					a = -0.003;
 					isDown = false
 				} else if (v<=0 && !isDown) {
@@ -82,10 +90,10 @@ export default {
 				v+=a
 
 				if (!isDown) {
-					if (sphere.position.y < 1.3) {
+					if (sphere.position.y < maxHeight) {
 						sphere.position.y = Math.round((sphere.position.y + v) * 100) / 100
 					} else {
-						sphere.position.y =  1.3
+						sphere.position.y =  maxHeight
 						isDown = true
 						v = 0
 					}
@@ -95,7 +103,7 @@ export default {
 					} else {
 						sphere.position.y = 0
 						isDown = false
-						v= 1.3
+						v= maxHeight
 					}
 				}
 
