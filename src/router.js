@@ -21,6 +21,10 @@ import MaterialEmissive from './components/material/emissive.vue'
 import MaterialImage from './components/material/Image.vue'
 import BasicAnimation from './components/animation/Baisc.vue'
 import ComplexAnimation from './components/animation/Complex.vue'
+import AmbientLight from './components/light/AmbientLight.vue'
+import PointLight from './components/light/PointLight.vue'
+import DirectionalLight from './components/light/DirectionalLight.vue'
+import SpotLight from './components/light/SpotLight.vue'
 
 export default new VueRouter({
 	routes: [
@@ -77,6 +81,18 @@ export default new VueRouter({
 		},
 		{
 			path: '/animation/complex', component: ComplexAnimation
-		}
+		},
+		{
+			path: '/light/ambient', component: AmbientLight
+		},
+		{
+			path: '/light/point', component: PointLight
+		},
+		{
+			path: '/light/directional', component: DirectionalLight
+		},
+		{
+			path: '/light/spot', component: SpotLight
+		},
 	]
 })

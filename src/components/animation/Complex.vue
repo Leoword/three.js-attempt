@@ -24,7 +24,7 @@ export default {
 		const stat = new Stat()
 
 		stat.domElement.style.position = 'absolute'
-		stat.domElement.style.top = '100px'
+		stat.domElement.style.top = '200px'
 		stat.domElement.style.left = '10px'
 
 		container.appendChild(stat.domElement)

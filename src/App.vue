@@ -2,6 +2,7 @@
   <div id="app">
     <div id="nav">
       <div>
+        <span>three.js形状定义</span>
         <router-link to="/camera/orthographic">正交投影照相机</router-link>
         <router-link to="/camera/perspective">透视投影照相机</router-link>
         <router-link to="/geometry/cube">立方体</router-link>
@@ -16,12 +17,20 @@
         <router-link to="/geometry/custom">自定义</router-link>
       </div>
       <div>
+        <span>three.js材质定义</span>
         <router-link to="/material/color">材质散射</router-link>
         <router-link to="/material/ambient">材质环境光散射</router-link>
         <router-link to="/material/emissive">材质自发光</router-link>
         <router-link to="/material/image">材质图片</router-link>
         <router-link to="/animation/basic">简易动画</router-link>
         <router-link to="/animation/complex">复杂动画</router-link>
+      </div>
+      <div>
+        <span>three.js光与影定义</span>
+        <router-link to="/light/ambient">环境光</router-link>
+        <router-link to="/light/point">点光源</router-link>
+        <router-link to="/light/directional">平行光</router-link>
+        <router-link to="/light/spot">聚光灯</router-link>
       </div>
     </div>
     <router-view></router-view>
